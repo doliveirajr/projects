@@ -76,12 +76,10 @@ TEST_F(test_CassinoGame, TestWhoWinWhenEasy)
 
     if (playerChoice == dut_.getCassinoRandomNumber())
     {
-        std::cout << "\nPlayer Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Player Wins!");
     }
     else
     {
-        std::cout << "\nCassino Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Cassino Wins!");
     }
 }
@@ -95,12 +93,10 @@ TEST_F(test_CassinoGame, TestWhoWinWhenNormal)
 
     if (playerChoice == dut_.getCassinoRandomNumber())
     {
-        std::cout << "\nPlayer Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Player Wins!");
     }
     else
     {
-        std::cout << "\nCassino Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Cassino Wins!");
     }
 }
@@ -114,12 +110,10 @@ TEST_F(test_CassinoGame, TestWhoWinWhenHard)
 
     if (playerChoice == dut_.getCassinoRandomNumber())
     {
-        std::cout << "\nPlayer Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Player Wins!");
     }
     else
     {
-        std::cout << "\nCassino Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Cassino Wins!");
     }
 }
@@ -133,12 +127,10 @@ TEST_F(test_CassinoGame, TestWhoWinWhenVeryHard)
 
     if (playerChoice == dut_.getCassinoRandomNumber())
     {
-        std::cout << "\nPlayer Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Player Wins!");
     }
     else
     {
-        std::cout << "\nCassino Win!\n";
         EXPECT_EQ(dut_.getWinner(playerChoice, dut_.getCassinoRandomNumber()), "Cassino Wins!");
     }
 }
