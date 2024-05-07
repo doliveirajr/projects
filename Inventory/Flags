@@ -1,0 +1,1 @@
+-o test.out -std=c++17 -lsqlite3
