@@ -2,7 +2,6 @@
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
 
-
 class test_Inventory : public ::testing::Test
 {
 public:
@@ -55,7 +54,8 @@ TEST_F(test_Inventory, TestIfCanInsertNewItemToTable)
     ASSERT_TRUE(dut_->updateDB(sql));
 }
 
-TEST_F(test_Inventory, TestIfCallsReadDB) {
+TEST_F(test_Inventory, TestIfCallsReadDB)
+{
     auto query = ("CREATE TABLE INVENTORY("
                   "ID INT PRIMARY KEY	 NOT NULL, "
                   "NAME		 TEXT NOT NULL, "
@@ -81,7 +81,8 @@ TEST_F(test_Inventory, TestIfCallsReadDB) {
     ASSERT_TRUE(dut_->callReadDB(read));
 }
 
-TEST_F(test_Inventory, TestIfCanDeleItemFromTable) {
+TEST_F(test_Inventory, TestIfCanDeleItemFromTable)
+{
     auto query = ("CREATE TABLE INVENTORY("
                   "ID INT PRIMARY KEY	 NOT NULL, "
                   "NAME		 TEXT NOT NULL, "
