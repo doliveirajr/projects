@@ -109,3 +109,33 @@ TEST_F(test_Inventory, TestIfCanDeleItemFromTable)
 
     dut_->callReadDB(sql);
 }
+
+TEST_F(test_Inventory, TestUpdateExistItem)
+{
+    auto query = ("CREATE TABLE INVENTORY("
+                  "ID INT PRIMARY KEY	 NOT NULL, "
+                  "NAME		 TEXT NOT NULL, "
+                  "PRICE		 REAL	 NOT NULL, "
+                  "QUANTITY		 INT	 NOT NULL );");
+
+    dut_->createDB(query);
+
+    auto sql = ("INSERT INTO INVENTORY VALUES(1, 'TV', 2455.0, 48);"
+                "INSERT INTO INVENTORY VALUES(2, 'PS5', 2000.5, 25);"
+                "INSERT INTO INVENTORY VALUES(3, 'NOTEBOOK', 2950.0, 20);"
+                "INSERT INTO INVENTORY VALUES(6, 'TABLE', 2455.0, 48);"
+                "INSERT INTO INVENTORY VALUES(5, 'BED', 2000.5, 25);"
+                "INSERT INTO INVENTORY VALUES(4, 'BOOK', 2950.0, 20);");
+
+    dut_->updateDB(sql);
+
+    sql = ("UPDATE INVENTORY "
+           "SET NAME = 'TABLE' "
+           "WHERE ID = 1;");
+
+    dut_->updateDB(sql);
+
+    sql = "SELECT COUNT(ID), PRICE FROM INVENTORY WHERE PRICE > 2400 GROUP BY PRICE ORDER BY PRICE DESC;";
+
+    dut_->callReadDB(sql);
+}

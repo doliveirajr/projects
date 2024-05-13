@@ -12,10 +12,7 @@ bool Inventory::createDB(std::string sql_)
         return false;
     }
     else
-    {
-        std::cout << "Table created Successfully!" << std::endl;
         return true;
-    }
 }
 
 int Inventory::readDB(void *data, int argc, char **argv, char **azColName)
@@ -42,9 +39,7 @@ bool Inventory::callReadDB(std::string query_)
         return false;
     }
     else
-    {
         return true;
-    }
 }
 
 bool Inventory::updateDB(std::string sql_)
@@ -58,10 +53,7 @@ bool Inventory::updateDB(std::string sql_)
         return false;
     }
     else
-    {
-        std::cout << "Records created Successfully!" << std::endl;
         return true;
-    }
 }
 
 bool Inventory::deleteDB(std::string sql_)
@@ -76,8 +68,5 @@ bool Inventory::deleteDB(std::string sql_)
         return false;
     }
     else
-    {
-        std::cout << "Record deleted Successfully!" << std::endl;
         return true;
-    }
 }
