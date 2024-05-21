@@ -14,7 +14,6 @@ protected:
     {
         delete dut_;
         ::testing::Test::TearDown();
-        // system("rm -rf Payroll.db");
     }
 
     Payroll *dut_;
