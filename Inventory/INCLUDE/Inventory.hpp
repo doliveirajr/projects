@@ -6,8 +6,7 @@
 class Inventory
 {
 private:
-    std::string query_{""};
-    std::string sql_{""};
+    
     int exit_{0};
     char *messaggeError_;
     sqlite3 *DB;

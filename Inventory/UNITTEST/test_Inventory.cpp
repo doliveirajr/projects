@@ -4,11 +4,6 @@
 
 class test_Inventory : public ::testing::Test
 {
-public:
-    // test_Inventory() : ::testing::Test(), dut_(NULL)
-    // {
-    // }
-
 protected:
     virtual void SetUp() override
     {
